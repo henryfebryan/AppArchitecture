@@ -66,8 +66,10 @@ class ScoreFragment : Fragment() {
         })
 
         viewModel.eventPlayAgain.observe(this, Observer { playAgain ->
-            if (playAgain)
+            if (playAgain) {
                 onPlayAgain()
+                viewModel.onPlayAgainComplete()
+            }
         })
 
         return binding.root

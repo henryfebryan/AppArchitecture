@@ -9,9 +9,13 @@ import androidx.lifecycle.ViewModel
 class GameViewModel : ViewModel() {
 
     companion object {
-        private const val DONE = 0L
-        private const val ONE_SECOND = 1000L
-        private const val COUNTDOWN_TIME = 60000L
+        // These represent different important times
+        // This is when the game is over
+        const val DONE = 0L
+        // This is the number of milliseconds in a second
+        const val ONE_SECOND = 1000L
+        // This is the total time of the game
+        const val COUNTDOWN_TIME = 60000L
     }
 
     private val timer: CountDownTimer
